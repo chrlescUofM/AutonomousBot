@@ -1,0 +1,7 @@
+struct scanpose_xyt_t
+{
+    int64_t utime;
+
+    double  xyt[3];     // x [m], y [m], theta [rad]
+    
+}

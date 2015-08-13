@@ -1,13 +1,33 @@
 # AutonomousBot
-My work with the MAEBot platform building an autonomous robot. Implements scan matching, DStarLite path planning, and PID control.
+My work with the MAEBot platform building an autonomous robot. Implements scan matching SLAM, DStarLite path planning, and PID control.  My primary task was in the implementation of the DStarLite algorithm.
 
 ## Repository Structure
+Note: Some files are omitted for brevity.
 * AutonomousBot -- Top level directory.
-  * INSTALL
+  * [calibration.config](/calibration.config) -- Contains the intrinsics and extrinsics camera parameters.
   * Makefile -- Use this to compile the code.
   * README.md -- This file.
   * [results.pdf](/results.pdf) -- An overview of the methods and results achieved.
   * [setenv.sh](/setenv.sh) -- A script to set up adjustable enviornment variables.
+  * [bin/](/bin/) -- Contains the final executable files.
+  * [config/](/config/) -- Necessary configuration files to run applications remotely on MAEBot.
+  * [lcmtypes/](/lcmtypes/) -- Defines the message types that will be sent using LCM to communicate with the hardware.
+  * [lib/](/lib/) -- Contains necessary archives.
+  * [src/](/src/) -- Contains the source code.
+  	* [bot/](/src/bot/) -- Contains the autonomous bot source code.
+  	  * [botlab.c](/src/bot/botlab.c) -- Main program and control loop for execution.
+  	  * [dStarLite.c](/src/bot/dStarLite.c) -- An implementation of DStarLite path planning.
+  	  * [pidControl.c](/src/bot/pidControl.c) -- Implements tuned PID control for the MAEBot.
+  	  * [priorityQueue.c](/src/bot/priorityQueue.c) -- Implements a C interface for a priority Queue structure.
+  	  * [scan_matching.c](/src/bot/scan_matching.c) -- Implements scan matching algorithm to align lidar scans.
+  	  * [slam.c](/src/bot/slam.c) -- Implements Simultaneous Localization and Mapping
+  	  * [smooth.c](/src/bot/smooth.c) -- Implements an optional path smoothing algorithm.
+    * [common/](/src/common/) -- Contains C implementations of usefull C++ constructs.
+    * [imagesource/](/src/imagesource/) -- Contains code for transmitting images from the MAEBot.
+    * [maebot/](/src/maebot/) -- Contains driver code for the MAEBot platform.
+    * [math/](/src/math/) -- Contains C implementations of usefull robotics functions.
+    * [pixy/](/src/pixy/) -- Contains pixy camera driver.
+    * [vx/](/src/vx/) -- Contains visualization code.
 
 
 ## Necessary Packages
