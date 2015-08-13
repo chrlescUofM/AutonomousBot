@@ -17,7 +17,7 @@ Note: Some files are omitted for brevity.
   	* [bot/](/src/bot/) -- Contains the autonomous bot source code.
   	  * [botlab.c](/src/bot/botlab.c) -- Main program and control loop for execution.
   	  * [dStarLite.c](/src/bot/dStarLite.c) -- An implementation of DStarLite path planning.
-  	  * [pidControl.c](/src/bot/pidControl.c) -- Implements tuned PID control for the MAEBot.
+  	  * [pidcontrol.c](/src/bot/pidcontrol.c) -- Implements tuned PID control for the MAEBot.
   	  * [priorityQueue.c](/src/bot/priorityQueue.c) -- Implements a C interface for a priority Queue structure.
   	  * [scan_matching.c](/src/bot/scan_matching.c) -- Implements scan matching algorithm to align lidar scans.
   	  * [slam.c](/src/bot/slam.c) -- Implements Simultaneous Localization and Mapping
