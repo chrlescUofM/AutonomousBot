@@ -13,24 +13,24 @@ My work with the MAEBot platform building an autonomous robot. Implements scan m
 ## Necessary Packages
 To begin with you should install the following packages, some of these are not necessary but are useful to have:
 
-'''
+```
 sudo apt-get -y install emacs vim-gtk cvs subversion git-core gitk units octave imagemagick ssh smartmontools nmap netcat curl wireshark traceroute libav-tools mplayer vlc sysstat valgrind autopoint xchat mesa-utils pkg-config curl
 
 sudo apt-get -y install autoconf automake autotools-dev libglib2.0-dev manpages-dev manpages-posix-dev libgl1-mesa-dev gtk-doc-tools libgtk2.0-dev python-dev libusb-dev libusb-1.0-0-dev libfuse-dev libi2c-dev libdc1394-22-dev libdc1394-utils libgsl0-dev gsl-doc-info gsl-doc-pdf realpath
 
 sudo apt-get -y install ant openjdk-6-jdk
-'''
+```
 You will also need to install LCM.  You can download version lcm-1.1.1 or higher from http://code.google.com/p/lcm, or alternatively, you can pull the latest source using git.  You will then to build and install from source following LCM's install directions.  Be sure to run ldconfig after having built LCM so that the linker can find it.
-'''
+```
 git clone https://code.google.com/p/lcm/
 cd lcm && ./bootstrap.sh && ./configure && make && sudo make install
 sudo ldconfig
-'''
+```
 As a one time thing, you need to build vx's fonts (you will need a working internet connection for this so that the Makefile can pull a fonts tarball from the web):
-'''
+```
 cd /src/vx
 make fonts
-'''
+```
 You are now all set to build the source using `make` or `make clean`
 
 ## Usage Instructions
