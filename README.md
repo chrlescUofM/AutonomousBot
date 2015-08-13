@@ -45,8 +45,7 @@ necessary prerequisites and open up the procman sherriff.
 
 * The odometry and lidar drivers must be run on the maebot prior to running the applications described below.
 
-botlab_odometry
----------------
+###botlab_odometry
 botlab_odometry is obtained from compiling the odometry.c program. We've programmed two different odometry models. 
 The default model uses the data obtained from the wheel encoders to estimate the x,y position and the angle relative 
 to an inertial frame. If the binary is executed with the "--use-gyro" flag, the second model that uses the wheel 
@@ -55,12 +54,10 @@ in the longitudinal and lateral slip is specified as defines inside the odometry
 with the "--use-gyro", the robot must remain stationary for the first 5 seconds. This enables us to obtain an estimate 
 of the gyro bias and hence eliminate the gyro bias. 
 
-botlab_scanmatcher
-------------------
+###botlab_scanmatcher
 This app should be run after the gyro has been calibrated in the previous app. This program estimates poses based on 
 scan matching and publishes these pose estimates over an LCM channel.
 
-botlab_app
------------------
+###botlab_app
 This is the main engine that initiates mapping, planning and control. Running the VX remote viewer provides GUI 
 for visualization. SHIFT+e turns on the PID controller. SHIFT+r turns off the PID controller.
